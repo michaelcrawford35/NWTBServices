@@ -1,0 +1,65 @@
+body h2, .navbar{
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+}
+.primary-bg {
+    background-color: #015138 !important;
+    color: white;
+}
+.nav-link {
+    padding: .4rem .8rem !important;
+}
+
+/* Fixes dropdown menus placed on the right side */
+.ml-auto .dropdown-menu {
+    left: auto !important;
+    right: 0px;
+}
+.navbar-brand{
+    padding:0px !important;
+    padding-bottom: 2px !important;
+
+}
+.dropdown-menu{
+    border-color: darkgrey;
+    box-shadow: 5px 2px 5px rgba(0,0,0,.25);
+}
+.nav-link{
+    border:1px solid;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.nav-item{
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+.vert-flexbox{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    padding:10px;
+    width:100%;
+
+}
+.hor-flexbox{
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+    align-items: center;
+    padding: 10px;
+    width:100%;
+}
+.flex-content{
+    padding:10px;
+    width:100%;
+    text-align: center;
+    border:1px solid rgb(206, 212, 218);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+.flex-sidebar{
+    padding:10px;
+    width:300px;
+    font-size:12px !important;
+}
