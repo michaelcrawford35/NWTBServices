@@ -5,6 +5,8 @@ import Home from './Home';
 import GroupList from './GroupList';
 import NWTBHome from './NWTBHome'
 import NWTBCico from "./NWTBCico";
+import NWTBSchedule from "./NWTBSchedule";
+import NWTBPrevBooks from "./NWTBPrevBooks";
 
 class App extends Component {
     render() {
@@ -15,6 +17,8 @@ class App extends Component {
                     <Route path='/groups' exact={true} component={GroupList}/>
                     <Route path='/nw' exact={true} component={NWTBHome}/>
                     <Route path='/cico' exact={true} component={NWTBCico}/>
+                    <Route path='/schedule' exact={true} component={NWTBSchedule}/>
+                    <Route path='/prevbooks' exact={true} component={NWTBPrevBooks}/>
                 </Switch>
             </Router>
         )
