@@ -7,6 +7,7 @@ import NWTBHome from './NWTBHome'
 import NWTBCico from "./NWTBCico";
 import NWTBSchedule from "./NWTBSchedule";
 import NWTBPrevBooks from "./NWTBPrevBooks";
+import NWTBSoldBooks from "./NWTBSoldBooks";
 
 class App extends Component {
     render() {
@@ -19,6 +20,7 @@ class App extends Component {
                     <Route path='/cico' exact={true} component={NWTBCico}/>
                     <Route path='/schedule' exact={true} component={NWTBSchedule}/>
                     <Route path='/prevbooks' exact={true} component={NWTBPrevBooks}/>
+                    <Route path='/soldbooks' exact={true} component={NWTBSoldBooks}/>
                 </Switch>
             </Router>
         )

@@ -2,10 +2,10 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, Table } from 'reactstrap';
 import './NWTBApp.css';
 
-const NWTBPrevBooksForm = (props) => {
+const NWTBSoldBooksForm = (props) => {
     return (
         <Form align="center" className="form-spacing">
-            <h2 className="nw-color">Textbook Services<br/>Previous Books</h2>
+            <h2 className="nw-color">Textbook Services<br/>Sold Books</h2>
             <FormGroup className="form-inline draw-border">
                 <Label for="termLabel">Term:</Label>
                 <Input type="text" name="termText" id="termText" className="gen-spacing"/>
@@ -19,13 +19,13 @@ const NWTBPrevBooksForm = (props) => {
             <Table size="sm">
                 <thead>
                 <tr className="nw-table-head">
-                    <th>Book</th>
-                    <th>Year</th>
-                    <th>Seq#</th>
-                    <th>Barcode</th>
+                    <th>Term</th>
+                    <th>Book Code</th>
+                    <th>Book Year</th>
+                    <th>Seq #</th>
                     <th width={'350px'}>Title</th>
-                    <th>Term Checked Out</th>
-                    <th>Date Checked In</th>
+                    <th>Cost</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -47,4 +47,4 @@ const NWTBPrevBooksForm = (props) => {
     );
 }
 
-export default NWTBPrevBooksForm;
+export default NWTBSoldBooksForm;
