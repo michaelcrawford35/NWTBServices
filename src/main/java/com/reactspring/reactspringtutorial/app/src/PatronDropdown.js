@@ -12,10 +12,10 @@ const PatronDD = (props) => {
                 Patron
             </DropdownToggle>
             <DropdownMenu>
-                <DropdownItem className={"nav-link"} href="/nw">Check In/Check Out</DropdownItem>
-                <DropdownItem className={"nav-link"} href="/nw">Patron Schedule</DropdownItem>
-                <DropdownItem className={"nav-link"} href="/nw">Patrons Previous Books</DropdownItem>
-                <DropdownItem className={"nav-link"} href="/nw">Patrons Sold Books</DropdownItem>
+                <DropdownItem className={"nav-link"} href="/cico">Check In/Check Out</DropdownItem>
+                <DropdownItem className={"nav-link"} href="/schedule">Patron Schedule</DropdownItem>
+                <DropdownItem className={"nav-link"} href="/prevbooks">Patrons Previous Books</DropdownItem>
+                <DropdownItem className={"nav-link"} href="/soldbooks">Patrons Sold Books</DropdownItem>
             </DropdownMenu>
         </Dropdown>
     );

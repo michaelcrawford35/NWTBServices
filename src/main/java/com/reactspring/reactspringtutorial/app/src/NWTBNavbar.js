@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './NWTBNavbar.css';
+import './NWTBApp.css';
 import nwlogo from './nwlogo-crop.svg';
 
 export default class NWTBNavbar extends Component {
