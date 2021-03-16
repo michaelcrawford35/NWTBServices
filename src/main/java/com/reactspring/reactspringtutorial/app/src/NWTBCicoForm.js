@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input, Table } from 'reactstrap';
-import './NWTBApp.css';
 
 const NWTBCicoForm = (props) => {
 

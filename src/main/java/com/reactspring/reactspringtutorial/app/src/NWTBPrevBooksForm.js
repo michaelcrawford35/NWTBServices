@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, Table } from 'reactstrap';
-import './NWTBApp.css';
 
 const NWTBPrevBooksForm = (props) => {
     return (
