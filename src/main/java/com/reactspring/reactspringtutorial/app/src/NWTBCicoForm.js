@@ -11,7 +11,7 @@ const NWTBCicoForm = (props) => {
     }
 
     return (
-        <Form align="center" className="form-spacing">
+        <Form className="form-spacing">
             <h2 className="nw-color">Textbook Services<br/>Check In/Check Out</h2>
             <FormGroup className="form-inline draw-border">
                 <Label for="termLabel">Term:</Label>
@@ -45,7 +45,7 @@ const NWTBCicoForm = (props) => {
                 </thead>
                 <tbody>
                 <tr>
-                    <td></td>
+                    <td>Test</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -57,12 +57,14 @@ const NWTBCicoForm = (props) => {
                 </tr>
                 </tbody>
             </Table>
-            <Button className="nw-button">New ID</Button>
-            <Button type="reset" className="nw-button" onClick={routeClear}>Clear</Button>
-            <Button className="nw-button">Schedule</Button>
-            <Button className="nw-button">Prev Books</Button>
-            <Button className="nw-button">Sold Books</Button>
-            <Button className="nw-button">Message</Button>
+            <div align="center">
+                <Button className="nw-button">New ID</Button>
+                <Button type="reset" className="nw-button" onClick={routeClear}>Clear</Button>
+                <Button className="nw-button">Schedule</Button>
+                <Button className="nw-button">Prev Books</Button>
+                <Button className="nw-button">Sold Books</Button>
+                <Button className="nw-button">Message</Button>
+            </div>
         </Form>
     );
 }
