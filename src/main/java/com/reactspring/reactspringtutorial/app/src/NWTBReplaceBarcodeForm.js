@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import {Button, Form, FormGroup, Label, Input, Table, TabContent} from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 const NWTBReplaceBarcodeForm = (props) => {
 

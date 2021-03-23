@@ -9,6 +9,7 @@ import NWTBSchedule from "./NWTBSchedule";
 import NWTBPrevBooks from "./NWTBPrevBooks";
 import NWTBSoldBooks from "./NWTBSoldBooks";
 import NWTBReplaceBarcode from "./NWTBReplaceBarcode";
+import NWTBQueryCourse from "./NWTBQueryCourse";
 
 class App extends Component {
     render() {
@@ -23,6 +24,7 @@ class App extends Component {
                     <Route path='/prevbooks' exact={true} component={NWTBPrevBooks}/>
                     <Route path='/soldbooks' exact={true} component={NWTBSoldBooks}/>
                     <Route path='/replace' exact={true} component={NWTBReplaceBarcode}/>
+                    <Route path='/courseQuery' exact={true} component={NWTBQueryCourse}/>
                 </Switch>
             </Router>
         )
