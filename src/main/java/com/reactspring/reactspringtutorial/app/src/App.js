@@ -11,6 +11,7 @@ import NWTBSoldBooks from "./NWTBSoldBooks";
 import NWTBReplaceBarcode from "./NWTBReplaceBarcode";
 import NWTBQueryCourse from "./NWTBQueryCourse";
 import NWTBCourseMessage from "./NWTBCourseMessage";
+import NWTBChangeBookCodeYear from "./NWTBChangeBookCodeYear";
 
 class App extends Component {
     render() {
@@ -27,6 +28,7 @@ class App extends Component {
                     <Route path='/replace' exact={true} component={NWTBReplaceBarcode}/>
                     <Route path='/courseQuery' exact={true} component={NWTBQueryCourse}/>
                     <Route path='/courseMessage' exact={true} component={NWTBCourseMessage}/>
+                    <Route path='/changebcy' exact={true} component={NWTBChangeBookCodeYear}/>
                 </Switch>
             </Router>
         )
