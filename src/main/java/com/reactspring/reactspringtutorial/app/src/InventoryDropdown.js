@@ -19,7 +19,7 @@ const InventoryDD = (props) => {
                     <DropdownItem className={"nav-link"} href="/replace">Replace Barcode</DropdownItem>
                     <DropdownItem className={"nav-link"} href="/courseQuery">Query Course</DropdownItem>
                     <DropdownItem className={"nav-link"} href="/courseMessage">Course Message</DropdownItem>
-                    <DropdownItem className={"nav-link"} href="/nw">Change Book Code/Year</DropdownItem>
+                    <DropdownItem className={"nav-link"} href="/changebcy">Change Book Code/Year</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
     );
