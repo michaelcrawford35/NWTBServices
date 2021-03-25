@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import './NWTBApp.css'
 import NWTBReactNavbar from "./NWTBReactNavbar";
+import NWTBQueryCourseForm from './NWTBQueryCourseForm'
 
-//TODO: Add flavor to own component
-class NWTBHome extends Component {
+
+class NWTBQueryCourse extends Component {
     render() {
         return (
             <div>
                 <NWTBReactNavbar/>
-                <h1>Welcome!</h1>
-                <h5>NWTBS Alpha v1.0</h5>
+                <div>
+                    <NWTBQueryCourseForm/>
+                </div>
             </div>
         );
     }
 }
 
-export default NWTBHome;
+export default NWTBQueryCourse;

@@ -1,44 +1,28 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input, Table } from 'reactstrap';
 
-const NWTBCicoForm = (props) => {
-
-    const history = useHistory();
-    const routeClear=()=> {
-        let path = '/cico';
-        history.push(path);
-    }
-
+const NWTBSoldBooksForm = (props) => {
     return (
         <Form align="center" className="form-spacing">
-            <h2 className="nw-color">Textbook Services<br/>Check In/Check Out</h2>
+            <h2 className="nw-color">Textbook Services<br/>Sold Books</h2>
             <FormGroup className="form-inline draw-border">
                 <Label for="termLabel">Term:</Label>
                 <Input type="text" name="termText" id="termText" className="gen-spacing"/>
                 <Input type="text" name="termDisplay" id="termDisplay"/>
-                <FormGroup className="ml-auto form-inline">
-                    <Label for="barcodeLabel">Barcode#:</Label>
-                    <Input type="text" name="barcodeDisplay" id="badDisplay"/>
-                </FormGroup>
             </FormGroup>
             <FormGroup className="form-inline draw-border">
                 <Label for="idLabel">ID:</Label>
                 <Input type="text" name="idText" id="idText" className="gen-spacing"/>
                 <Input type="text" name="idDisplay" id="idDisplay"/>
-                <FormGroup className="ml-auto form-inline">
-                    <Label for="bagLabel">Bag#:</Label>
-                    <Input type="text" name="bagDisplay" id="badDisplay"/>
-                </FormGroup>
             </FormGroup>
             <Table size="sm">
                 <thead>
                 <tr className="nw-table-head">
                     <th>Term</th>
-                    <th>Code</th>
-                    <th>Year</th>
+                    <th>Book Code</th>
+                    <th>Book Year</th>
                     <th>Seq #</th>
-                    <th>Title</th>
+                    <th width={'350px'}>Title</th>
                     <th>Cost</th>
                     <th></th>
                 </tr>
@@ -57,14 +41,9 @@ const NWTBCicoForm = (props) => {
                 </tr>
                 </tbody>
             </Table>
-            <Button className="nw-button">New ID</Button>
-            <Button type="reset" className="nw-button" onClick={routeClear}>Clear</Button>
-            <Button className="nw-button">Schedule</Button>
-            <Button className="nw-button">Prev Books</Button>
-            <Button className="nw-button">Sold Books</Button>
-            <Button className="nw-button">Message</Button>
+            <Button className="nw-button">Exit</Button>
         </Form>
     );
 }
 
-export default NWTBCicoForm;
+export default NWTBSoldBooksForm;

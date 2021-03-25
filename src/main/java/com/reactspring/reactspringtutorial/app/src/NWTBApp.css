@@ -15,8 +15,8 @@ td {
     border: 2px solid grey;
 }
 .nw-table-head{
-    background-color: #008040;
-    color: black;
+    background-color: #015138;
+    color: white;
     max-height: 10px !important;
 }
 .nw-color{
@@ -88,9 +88,10 @@ td {
     border-radius: 10px;
     padding: 10px;
 }
-.disabled-text{
-    color: white;
-}
 .gen-spacing{
     margin-right: 10px;
+}
+.text-label{
+    min-width: 150px;
+    min-height: 35px;
 }
