@@ -24,7 +24,7 @@ const NWTBCicoForm = (props) => {
             </FormGroup>
             <FormGroup className="form-inline draw-border">
                 <Label for="idLabel">ID:</Label>
-                <Input type="text" name="idText" id="idText" className="gen-spacing"/>
+                <Input type="text" name="idText" id="idText" className="gen-spacing" autoFocus="true"/>
                 <Input type="text" name="idDisplay" id="idDisplay"/>
                 <FormGroup className="ml-auto form-inline">
                     <Label for="bagLabel">Bag#:</Label>
