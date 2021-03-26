@@ -12,10 +12,10 @@ const InventoryDD = (props) => {
                     Inventory
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem className={"nav-link"} href="/nw">Maintenance</DropdownItem>
-                    <DropdownItem className={"nav-link"} href="/nw">Add Books</DropdownItem>
-                    <DropdownItem className={"nav-link"} href="/nw">Query Book</DropdownItem>
-                    <DropdownItem className={"nav-link"} href="/nw">Change Book Disposition</DropdownItem>
+                    <DropdownItem className={"nav-link"} href="maintenance">Maintenance</DropdownItem>
+                    <DropdownItem className={"nav-link"} href="/addbooks">Add Books</DropdownItem>
+                    <DropdownItem className={"nav-link"} href="/querybooks">Query Book</DropdownItem>
+                    <DropdownItem className={"nav-link"} href="/changebookdisposition">Change Book Disposition</DropdownItem>
                     <DropdownItem className={"nav-link"} href="/replace">Replace Barcode</DropdownItem>
                     <DropdownItem className={"nav-link"} href="/courseQuery">Query Course</DropdownItem>
                     <DropdownItem className={"nav-link"} href="/courseMessage">Course Message</DropdownItem>
