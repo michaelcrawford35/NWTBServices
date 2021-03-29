@@ -13,5 +13,5 @@ public interface STVTERMRepository extends JpaRepository<STVTERM, String> {
     List<STVTERM> findAll();
     @Override
     Optional<STVTERM> findById(String STVTERM);
-    Optional<STVTERM> findBySTVTERM_DESC(String STVERM);
+    //Optional<STVTERM> findBySTVTERM_DESC(String STVTERM);
 }
