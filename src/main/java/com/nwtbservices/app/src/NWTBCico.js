@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './NWTBApp.css'
-import NWTBReactNavbar from "./NWTBReactNavbar";
+import NWTBNavbar from "./NWTBNavbar";
 import NWTBCicoForm from './NWTBCicoForm'
 
 class NWTBCico extends Component {
     render() {
         return (
             <div>
-                <NWTBReactNavbar/>
+                <NWTBNavbar/>
                 <div>
                     <NWTBCicoForm/>
                 </div>

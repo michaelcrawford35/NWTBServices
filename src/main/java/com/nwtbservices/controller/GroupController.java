@@ -1,7 +1,7 @@
-package com.reactspring.reactspringtutorial.controller;
+package com.nwtbservices.controller;
 
-import com.reactspring.reactspringtutorial.model.Group;
-import com.reactspring.reactspringtutorial.repository.GroupRepository;
+import com.nwtbservices.model.Group;
+import com.nwtbservices.repository.GroupRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

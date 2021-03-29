@@ -1,4 +1,4 @@
-package com.reactspring.reactspringtutorial;
+package com.nwtbservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @SpringBootApplication
-public class ReactspringtutorialApplication {
+public class MainSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReactspringtutorialApplication.class, args);
+		SpringApplication.run(MainSpringApplication.class, args);
 	}
 
 	@Bean

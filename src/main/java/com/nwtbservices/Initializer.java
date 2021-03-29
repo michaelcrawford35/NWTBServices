@@ -1,13 +1,12 @@
-package com.reactspring.reactspringtutorial;
+package com.nwtbservices;
 
-import com.reactspring.reactspringtutorial.model.Group;
-import com.reactspring.reactspringtutorial.model.Event;
-import com.reactspring.reactspringtutorial.repository.GroupRepository;
+import com.nwtbservices.model.Group;
+import com.nwtbservices.model.Event;
+import com.nwtbservices.repository.GroupRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.stream.Stream;
 

@@ -1,4 +1,4 @@
-package com.reactspring.reactspringtutorial.model;
+package com.nwtbservices.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

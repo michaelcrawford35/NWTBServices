@@ -1,10 +1,10 @@
-package com.reactspring.reactspringtutorial;
+package com.nwtbservices;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReactspringtutorialApplicationTests {
+class MainSpringApplicationTests {
 
 	@Test
 	void contextLoads() {

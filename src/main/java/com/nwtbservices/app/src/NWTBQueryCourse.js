@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './NWTBApp.css'
-import NWTBReactNavbar from "./NWTBReactNavbar";
+import NWTBNavbar from "./NWTBNavbar";
 import NWTBQueryCourseForm from './NWTBQueryCourseForm'
 
 
@@ -8,7 +8,7 @@ class NWTBQueryCourse extends Component {
     render() {
         return (
             <div>
-                <NWTBReactNavbar/>
+                <NWTBNavbar/>
                 <div>
                     <NWTBQueryCourseForm/>
                 </div>
