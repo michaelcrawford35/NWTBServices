@@ -8,11 +8,11 @@
 		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.reactspring</groupId>
-	<artifactId>reactspringtutorial</artifactId>
+	<groupId>com.nwtbservices</groupId>
+	<artifactId>nwtbapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>reactspringtutorial</name>
-	<description>Creating a CRUD app with Spring  Boot and React</description>
+	<name>nwtbservicesapp</name>
+	<description>Recreation of the Textbook Services software in a modern programming language.</description>
 	<properties>
 		<java.version>15</java.version>
 	</properties>
