@@ -12,10 +12,10 @@ import NWTBReplaceBarcode from "./NWTBReplaceBarcode";
 import NWTBQueryCourse from "./NWTBQueryCourse";
 import NWTBCourseMessage from "./NWTBCourseMessage";
 import NWTBChangeBookCodeYear from "./NWTBChangeBookCodeYear";
-//import NWTBMaintenance from  './NWTBMaintenance';
-//import NWTBAddBooks from './NWTBAddBooks';
-//import NWTBQueryBooks from './NWTBQueryBooks';
-//import NWTBChangeBookDisposition from './NWTBChangeBookDisposition';
+import NWTBMaintenance from  './NWTBMaintenance';
+import NWTBAddBooks from './NWTBAddBooks';
+import NWTBQueryBooks from './NWTBQueryBooks';
+import NWTBChangeBookDisposition from './NWTBChangeBookDisposition';
 
 class App extends Component {
     render() {
@@ -32,6 +32,10 @@ class App extends Component {
                     <Route path='/courseQuery' exact={true} component={NWTBQueryCourse}/>
                     <Route path='/courseMessage' exact={true} component={NWTBCourseMessage}/>
                     <Route path='/changebcy' exact={true} component={NWTBChangeBookCodeYear}/>
+                    <Route path='/maintenance' exact={true} component={NWTBMaintenance}/>
+                    <Route path='/addbooks' exact={true} component={NWTBAddBooks}/>
+                    <Route path='/querybooks' exact={true} component={NWTBQueryBooks}/>
+                    <Route path='/changebookdisposition' exact={true} component={NWTBChangeBookDisposition}/>
                 </Switch>
             </Router>
         )
