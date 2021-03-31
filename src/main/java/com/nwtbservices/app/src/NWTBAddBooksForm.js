@@ -24,7 +24,7 @@ const useStyles=makeStyles(theme=>({
 
   },
   searchInput:{
-      
+
       padding:'3px 3px',
       marginTOp:'10px',
       marginLeft:'0px',
@@ -56,7 +56,7 @@ const useStyles=makeStyles(theme=>({
         color:'#245c24',
         fontWeight:'bold'
       },
-  
+
 
       spacing:{
         border:'2px solid #aeaeb5',
@@ -64,20 +64,20 @@ const useStyles=makeStyles(theme=>({
         borderRadius:'6px',
         fontSize:'15px',
         marginLeft:'15px',
-        padding:'2px',     
+        padding:'2px',
         borderColor:'green',
         marginBottom:'0px',
-        
+
         '&:focus':{
           outline:'none',
         borderColor:'green',
         boxShadow:'0 0 10px green'
 
         }
-    
+
 
       },
-  
+
       button:{
         backgroundColor:'green',
         marginTOp:'10px',
@@ -86,9 +86,9 @@ const useStyles=makeStyles(theme=>({
         '&:hover': {
           backgroundColor: 'green',
           borderColor: 'green',
-          boxShadow: 'none',  
+          boxShadow: 'none',
       },
-      
+
       },
       grid:{
         border:'2px solid green',
@@ -101,8 +101,8 @@ const useStyles=makeStyles(theme=>({
       marginRight:'75px'
 
     }
-  
-  
+
+
 }));
 
 function Form(){
@@ -146,7 +146,7 @@ return(
        <Grid item xs={12}className={classes.searchInput} alignItems="flex-end" >
          <Paper className={classes.paper} elevation={10} >
          <h1 className={classes.h1}> Book info</h1>
-         <label >
+         <label>
                   <div className={classes.label}>
                   Title
                   </div>
@@ -155,7 +155,7 @@ return(
                    
          </label> 
          <div>
-         <label >
+         <label>
          <div className={classes.label}>
                   Seq Nr
                   </div>
@@ -163,7 +163,7 @@ return(
          </label> 
             </div>
             <div>
-              <label >
+              <label>
                  <div className={classes.label}>
                   Strike Barcode
                   </div>
