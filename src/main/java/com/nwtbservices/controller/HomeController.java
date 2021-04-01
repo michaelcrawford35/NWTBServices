@@ -34,6 +34,10 @@ public class HomeController {
     private NWTXARRepository NWTXARRepository;
     @Autowired
     private NWTXBNRepository NWTXBNRepository;
+    @Autowired
+    private NWTXCMRepository NWTXCMRepository;
+    @Autowired
+    private NWTXDTRepository NWTXDTRepository;
 
     //Prints out every record in the SGBSTDN table.
     @GetMapping("/SGBSTDN")
