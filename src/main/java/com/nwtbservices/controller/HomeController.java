@@ -34,6 +34,8 @@ public class HomeController {
     private NWTXARRepository NWTXARRepository;
     @Autowired
     private NWTXBNRepository NWTXBNRepository;
+    @Autowired
+    private NWTXUSERRepository NWTXUSERRepository;
 
     //Prints out every record in the SGBSTDN table.
     @GetMapping("/SGBSTDN")
@@ -83,6 +85,14 @@ public class HomeController {
     @GetMapping ("/SSRMEETFORM")
     public SSRMEET ssrmeetFormResult(@RequestParam(name = "ssrmeetCodeName", defaultValue = "") String Code, @RequestParam(name = "ssrmeetCRNName", defaultValue = "") String CRN){
         return SSRMEETRepository.findByCRN(Code, CRN);
+    }
+
+
+
+    //Returns the users current admin
+    @GetMapping ("/NWTXUSER")
+    public NWTXUSER nwtxuserFormResult(@RequestParam(name = "nwtxuser_user", defaultValue = "") String USR, @RequestParam(name = "nwtxuser_pass", defaultValue = "") String PASS){
+        return NWTXUSERRepository.findByUSR(USR, PASS);
     }
 }
 
