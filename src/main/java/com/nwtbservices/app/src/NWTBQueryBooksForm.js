@@ -1,327 +1,118 @@
 import React from 'react';
-import {useForm} from "react-hook-form"
-import { Grid, TextField,makeStyles,Paper} from '@material-ui/core';
-import{Button} from 'react-bootstrap'
 import { useHistory } from 'react-router-dom';
+import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
 
 
-const inputProps = {
-  step: 300,
-  siz:'small'
-};
+const NWTBQueryBooksForm = (props) => {
 
-
-const useStyles=makeStyles(theme=>({
-
-  inputbase:{
-    border:'2px solid green',
-    marginLeft:'155px',
-    borderRadius:theme.shape.borderRadius,
-    height:"5vh",
-    '&:hover':{
-      backgroundColor:'#b5f5d2'
+  const history = useHistory();
+  const routeClear = () => {
+    let path = '/replace';
+    history.push(path);
   }
-
-  },
-  searchInput:{
-      
-      padding:'3px 3px',
-      marginTOp:'10px',
-      marginLeft:'15px',
-      marginRight:'15px',
-      
-      },
-
-      paper:{
-        textAlign:"justify",
-        padding:'10px',
-        border:'2px solid green',
-        width:'100%',
-        
-      
-      },
-
-      h1:{
-        fontSize:'15px',
-        width:'110px',
-        marginTop:'-24px',
-        marginLeft:'55px',
-        background:'white',
-        textAlign: 'center',
-        color:'white',
-        backgroundColor:'#426e4d',
-        border:'2px solid green',
-
-      },
-      label:{
-        width:'145px',
-        display:'inline-block',
-        textAlign:'right',
-        color:'#245c24',
-        fontWeight:'bold'
-        
-      },
-      label2grid:{
-        width:'200px',
-        display:'inline-block',
-        textAlign:'right',
-        color:'#245c24',
-        fontWeight:'bold'
-
-      },
-      div:{
-        paddingLeft:'35px',
-        paddingRight:'80px',
-        paddingTop:'5px',
-        paddingBottom:'30px',
-        marginTop:'0px',
-        marginBottom:'150px',
-        border:'2px solid green',
-        padding:'5px 55px 5px 5px'
-
-      },
-  
-
-      spacing:{
-        border:'2px solid #aeaeb5',
-        height:'28.5px',
-        borderRadius:'6px',
-        fontSize:'15px',
-        marginLeft:'15px',
-        padding:'2px',
-        borderColor:'green',
-        marginBottom:'8px',
-        '&:focus':{
-          outline:'none',
-        borderColor:'green',
-        boxShadow:'0 0 10px green'
-
-        }
-    
-        
-      },
-  
-      button:{
-        backgroundColor:'#245c24',
-        marginTOp:'10px',
-        marginLeft:'15px',
-        marginRight:'15px',
-        '&:hover': {
-          backgroundColor: 'green',
-          borderColor: 'green',
-          boxShadow: 'none',
-         
-      },
+  return (
+    <Form align="center" className="form-spacing">
+      <h2 className="nw-color">Textbook Services<br />Querry A Book</h2>
+      <FormGroup className="form-inline draw-border">
+        <div className="hor-flexbox">
 
 
-    },
-    grid2:{
-      marginTop:'15px',
-      marginLeft:'14px',
-     marginRight:'4px',
-     marginBottom:'25px'
+          <Label id="form-label" for="bookCode">Book Code: </Label>
+          <Input type="text" name="bookCodeText" id="bookCodeText" className="gen-spacing" />
 
-    }
-    
-        
 
-    
-}));
+          <Label id="form-label" for="bookYear">Book Year: </Label>
+          <Input type="text" name="bookYearText" id="bookYearText" />
 
-function Form(){
-    const classes=useStyles();
-    const { register,handleSubmit}=useForm();
-    const onSubmit=(data)=>{
-        console.log(data)
-    }
-    function clearAll(){
-      document.getElementById("myForm").reset()
-    }
-return(
-    
-    <form className={classes.searchInput} id="myform" onSubmit={handleSubmit(onSubmit)}>
-                
-        <div className={classes.div}>
-               
-               <Grid container spacing={3}
-                          direction="row"
-                          justify="flex"
-                          alignItems="baseline"
-                         style={{
-                         margin:'5px 5px 5px 5px'
-                    }} >
-           
-                   
-           <Grid item xs={12} className={classes.searchInput}style={{marginTOp:'10px'}} >
-             
-                 <Paper elevation={10} className={classes.paper} >
-                   
-                   <label>
-                       <div className={classes.label}>Book code</div>
-                       
-                       <input className ={classes.spacing}type="text" name="bookCode" ref={register} />
-                   </label>
-                   <label >
-                   <div className={classes.label}>Book Year</div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="bookYear" ref={register} />
-                   </label>        
-             </Paper>
-            </Grid>
-           
-           <Grid item xs={12}className={classes.searchInput} alignItems="flex-end" >
-             <Paper className={classes.paper} elevation={10} >
-             <h1 className={classes.h1}> Book info</h1>
-        
-             <label >
-                      <div className={classes.label}>
-                      Title
-                      </div>
-                       
-                       <input className ={classes.spacing}type="text" placeholder="" name="title" ref={register}style={{width:'505px'}}  />        
-             </label> 
-             
-    
-             <div>
-             <label >
-             <div className={classes.label}>
-                      Seq Nr
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'105px'}}  />
-             </label> 
-                </div>
- 
-             </Paper>
-             
-             
-           </Grid>
-           </Grid>
-           <Grid container spacing={12}
-                          direction="row"
-                          justify="center"
-                          alignItems="baseline"
-                          className={classes.grid2}
-                      >
-           
-           <Grid xs={6}className={classes.searchInput}  alignItems="flex-end">
-               <Paper className={classes.paper} elevation={10} >
-               <h1 className={classes.h1}> Current Info</h1>
-               <div>
-                 <label >
-                     <div className={classes.label2grid}>
-                        Current Disposition
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
-               <div>
-                 <label >
-                     <div className={classes.label2grid}>
-                        Term Check Out
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
-               <div>
-               <label >
-                     <div className={classes.label2grid}>
-                        Checked Out To
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
-               <div>
-               <label >
-                     <div className={classes.label2grid}>
-                        
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
-               <div>
-               <label >
-                     <div className={classes.label2grid}>
-                        Date Checked Out
-                      </div>
-                       <input className ={classes.spacing}type="date" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
 
-                 </Paper>
+        </div>
 
-             </Grid>
-             <Grid xs={5}className={classes.searchInput}  alignItems="flex-end">
-               <Paper className={classes.paper} elevation={10} >
-               <h1 className={classes.h1}> Previous Info</h1>
-               <div>
-               <label >
-                     <div className={classes.label2grid}>
-                        Previous Term Check Out
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
-               <div>
-               <label >
-                     <div className={classes.label2grid}>
-                        Previous Checked Out To
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
-               <div>
-               <label >
-                     <div className={classes.label2grid}>
-                      
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="author" ref={register} style={{width:'200px'}}  />
-                   </label> 
-               </div>
-               <div>
-               <label >
-                     <div className={classes.label2grid}>
-                        Date Checked in:
-                      </div>
-                       <input className ={classes.spacing}type="date" placeholder="" name="author" ref={register} style={{width:'200px',marginTop:'10px'}}  />
-                   </label> 
-               </div>
-               <div>&nbsp;</div>
-               
+      </FormGroup>
 
-                 </Paper>
+      <FormGroup className="form-inline draw-border">
+        <div id="ribbon">Book Info: </div>
+        <div className="hor-flexbox">
+          <Label id="form-label" for="title">Title: </Label>
+          <Input type="text" name="titleText" id="titleText" className="gen-spacing" />
+        </div>
+        <div className="hor-flexbox">
+          <Label id="form-label" for="seqenceNum">Seq Number: </Label>
+          <Input type="text" name="sequenceNumText" id="sequenceNumText" className="gen-spacing" />
+        </div>
 
-             </Grid>
-             
-          
-         </Grid>
-         <Grid item xs={12}>
-           <Button style={{backgroundColor:'green',height:"35px", width:'100px'}}>&nbsp;Save&nbsp;</Button>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <Button onclick="clearAll()"style={{backgroundColor:'green',height:"35px", width:'100px'}}>Clear</Button>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <Button style={{backgroundColor:'green',height:"35px", width:'100px'}}>Main Menu</Button>
-    
-           </Grid>
-       
-     
-         </div>
-            
-    
-                   
-              
-              
-          
-       </form>
-          
-  
-         
+      </FormGroup>
 
-                
-           
-           
-       
-   
-);
 
+      <Container>
+        <Row  >
+
+          <Col sm='6'>
+            <FormGroup className="form-inline draw-border">
+              <div id="ribbon">CurrentInfo: </div>
+
+              <div className="hor-flexbox">
+                <Label id="form-label" for="currentDisposition">Current Disposition : </Label>
+                <Input type="text" name="currentdispositionText" id="currentdispositionText" className="gen-spacing" />
+              </div>
+              <div className="hor-flexbox">
+                <Label id="form-label" for="termCheckout">Term Check Out: </Label>
+                <Input type="text" name="termcheckoutText" id="termcheckoutText" className="gen-spacing" />
+              </div>
+              <div className="hor-flexbox">
+                <Label id="form-label" for="checkedoutTo">Checked Out To: </Label><br />
+                <Input type="text" name="checkedOutToText1" id="checkedOutToText1" className="gen-spacing" />
+              </div>
+
+              <div className="hor-flexbox">
+                <Label id="form-label" for="dateCheckedout">Date Checeked Out: </Label>
+                <Input type="date" name="dateCheckedOutText" id="dateCheckedOutText" className="gen-spacing" />
+
+              </div>
+            </FormGroup>
+
+
+
+          </Col>
+          <Col sm="6">
+
+            <FormGroup className="form-inline draw-border">
+
+              <div id="ribbon">Previous Info: </div>
+              <div className="hor-flexbox">
+                <Label id="form-label" for="previousTermCheckOut">Previous Term Check Out: </Label>
+                <Input type="text" name="previousTermCheckOutText" id="previousTermCheckOutText" className="gen-spacing" />
+
+              </div>
+              <div className="hor-flexbox">
+                <Label id="form-label" for="previousCheckedOutTo1">Previously checked Out To: </Label>
+                <Input type="text" name="previousCheckedOutToText1" id="previousCheckedOutToText1" className="gen-spacing" />
+
+              </div>
+              <div className="hor-flexbox">
+                <Label id="form-label" for="previousCheckedOutTo2"> </Label>
+                <Input type="text" name="previousCheckedOutToText2" id="previousCheckedOutToText2" className="gen-spacing" />
+
+              </div>
+              <div className="hor-flexbox">
+                <Label id="form-label" for="dateCheckedIn">DateCheckedIn: </Label>
+                <Input type="date" name="dateCheckedInText" id="dateCheckedInText" className="gen-spacing" />
+
+              </div>
+
+            </FormGroup>
+
+          </Col>
+
+        </Row>
+
+
+      </Container>
+
+
+      <Button className="nw-button">Main Menu</Button>
+      <Button className="nw-button">Clear</Button>
+    </Form>
+  )
 }
-export default Form;
 
+export default NWTBQueryBooksForm;
