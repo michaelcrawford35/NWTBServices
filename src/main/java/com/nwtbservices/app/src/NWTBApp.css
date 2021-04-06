@@ -9,6 +9,8 @@ body h2, .navbar{
 .nw-button{
     background-color: #015138 !important;
     margin-right: 5px;
+    margin-bottom: 5px;
+    width:115px;
 }
 th,
 td {
@@ -92,9 +94,30 @@ td {
     padding: 10px;
 }
 .gen-spacing{
-    margin-right: 10px;
+    margin-right: 2px;
+    margin-left:8px;
 }
 .text-label{
     min-width: 150px;
     min-height: 35px;
 }
+#form-label{
+    width:210px;
+    display:inline-block;
+    color:#245c24;
+    text-align: right;
+    font-Weight:bold;
+}
+#ribbon{
+    font-size:15px;
+    width:110px;
+    height: 25px;
+    margin-top:-20px;
+    margin-left:55px;
+    background:white;
+    text-align: center;
+    color:white;
+    background-color:#015138;
+    border:2px solid #015138;
+}
+

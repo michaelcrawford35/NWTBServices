@@ -1,229 +1,63 @@
 import React from 'react';
-import {useForm} from "react-hook-form"
-import { Grid,makeStyles,Paper} from '@material-ui/core';
-import{Button} from 'react-bootstrap'
 import { useHistory } from 'react-router-dom';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
-const inputProps = {
-  step: 300,
-  siz:'small'
-};
+
+const NWTBChangeBookDispositionForm = (props) => {
 
 
-const useStyles=makeStyles(theme=>({
-  
-  inputbase:{
-    border:'2px solid green',
-    marginLeft:'155px',
-    borderRadius:theme.shape.borderRadius,
-    height:"5vh",
-    '&:hover':{
-      backgroundColor:'#b5f5d2'
-
+  const history = useHistory();
+  const routeClear = () => {
+    let path = '/replace';
+    history.push(path);
   }
-
-  },
-  searchInput:{
-      
-      padding:'3px 3px',
-      marginTOp:'10px',
-      marginLeft:'15px',
-      marginRight:'15px',
-      },
-
-      paper:{
-        textAlign:"justify",
-        padding:'14px',
-        border:'2px solid green',
-      },
+  return (
+    <Form align="center" className="form-spacing">
+      <h2 className="nw-color">Textbook Services<br />Change Book Disposition</h2>
+      <FormGroup className="form-inline draw-border">
+        <div className="hor-flexbox">
 
 
-      h1:{
-        fontSize:'15px',
-        width:'110px',
-        marginTop:'-25px',
-        marginLeft:'55px',
-        background:'white',
-        textAlign: 'center',
-        color:'white',
-        backgroundColor:'#426e4d',
-        border:'2px solid green',
-      },
+          <Label id="form-label" for="bookCode">Book Code: </Label>
+          <Input type="text" name="bookCodeText" id="bookCodeText" className="gen-spacing" />
 
-      label:{
-        width:'150px',
-        display:'inline-block',
-        textAlign:'right',
-        color:'#245c24',
-        fontWeight:'bold'
-      },
-  
 
-      spacing:{
-        border:'2px solid #aeaeb5',
-        height:'28.5px',
-        borderRadius:'6px',
-        fontSize:'15px',
-        marginLeft:'15px',
-        padding:'2px',
-        borderColor:'green',
-        marginBottom:'8px',
-        
-        '&:focus':{
-          outline:'none',
-        borderColor:'green',
-        boxShadow:'0 0 10px green'
+          <Label id="form-label" for="bookYear">Book Year: </Label>
+          <Input type="text" name="bookYearText" id="bookYearText" />
 
-        }
-    
+          <Label id="form-label" for="strikeBarcode">Strike Barcode: </Label>
+          <Input type="text" name="strikeBarcodeText" id="strikeBarcodeText" />
 
-      },
-  
-      button:{
-        backgroundColor:'green',
-        marginTOp:'10px',
-        marginLeft:'15px',
-        marginRight:'15px',
-        '&:hover': {
-          backgroundColor: 'green',
-          borderColor: 'green',
-          boxShadow: 'none',
-         
-      },
 
-      },
-      div:{
-        paddingLeft:'15px',
-        paddingRight:'15px',
-        paddingTop:'0px',
-        paddingBottom:'150px',
-        marginTop:'25px',
-        marginBottom:'150px'
+        </div>
 
-      },
-      Grid:{
-        border:'2px solid green',
-        padding:'0px 5px 5px 5px'
+      </FormGroup>
 
-      }
-
- 
-    
-    
-        
-
-    
-}));
-
-function Form(){
-    const classes=useStyles();
-    const { register,handleSubmit}=useForm();
-    const onSubmit=(data)=>{
-        console.log(data)
-    }
-return(
-    
-    <form className={classes.searchInput}  onSubmit={handleSubmit(onSubmit)}>
-                
-           
-      <div className={classes.div}>
-               
-               <Grid container spacing={3}
-                          direction="row"
-                          justify="center"
-                          alignItems="baseline"
-                          className={classes.Grid}
-                >
-
-           <Grid item xs={12} className={classes.searchInput}style={{marginTOp:'10px'}} >
-                 <Paper elevation={10} className={classes.paper}>
-                   <label>
-                       <div className={classes.label}>Book code</div>
-                       <input className ={classes.spacing}type="text" name="bookCode" ref={register} />
-                   </label>
-                   <label >
-                   <div className={classes.label}>Book Year</div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="bookYear" ref={register} />
-                   </label>   
-                   <label >
-                   <div className={classes.label}>Strike Barcode</div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="bookYear" ref={register} />
-                   </label>    
-             </Paper>
-            </Grid>
-           
-           <Grid item xs={12}className={classes.searchInput} alignItems="flex-end" >
-             <Paper className={classes.paper} elevation={10} >
-             <h1 className={classes.h1}> Book info</h1> 
-             <label >
-                      <div className={classes.label}>
-                      Title
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="title" ref={register}style={{width:'509px'}}  />         
-             </label> 
-             <div>
-             <label >
-             <div className={classes.label}>
-                      Seq Nr
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="0" name="author" ref={register} style={{width:'150px'}}  />
-             </label> 
-                </div>
-              <div>
-                  <label >
-                     <div className={classes.label}>
-                      Current Disposition
-                      </div>
-                       <input className ={classes.spacing}type="text" placeholder="" name="publisher" ref={register} style={{width:'265px'}} disabled  />
-                  </label> 
-              </div>
-                <div>
-                  <label >
-                     <div className={classes.label}>
-                      Change Destination TO
-                      </div>
-                       <select className ={classes.spacing}type="dropdown" placeholder="" name="publisher" ref={register} style={{width:'265px',height:'28px'}}  >
-                       <option value="valu1">(No Change)</option>
-                       <option value="valu2">Valu2</option>
-                       </select>
-                  </label> 
-                </div>
-             </Paper>  
-           </Grid>
-    
-     
-           
-    
-       
-           <Grid item xs={12}>
-           <Button style={{backgroundColor:'green',height:"35px", width:'100px'}}>&nbsp;Save&nbsp;</Button>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <Button style={{backgroundColor:'green',height:"35px", width:'100px'}}>Clear</Button>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <Button style={{backgroundColor:'green',height:"35px", width:'100px'}}>Main Menu</Button>
-    
-           </Grid>
-    
-          
-         </Grid>
-       
-     
-         </div>
-            
-    
-    
-  
-      
-         
-
-                
-           
-           
-       
-    </form>
-);
-
+      <FormGroup className="form-inline draw-border">
+        <div id="ribbon">Book Info: </div>
+        <div className="hor-flexbox">
+          <Label id="form-label" for="title">Title </Label>
+          <Input type="text" name="titleText" id="titleText" className="gen-spacing" />
+        </div>
+        <div className="hor-flexbox">
+          <Label id="form-label" for="seqenceNum">Seq Number: </Label>
+          <Input type="text" name="sequenceNumText" id="sequenceNumText" className="gen-spacing" />
+        </div>
+        <div className="hor-flexbox">
+          <Label id="form-label" for="currentDisposition">Current Disposition: </Label>
+          <Input type="text" name="currentDispositionText" id="currentDispositionText" className="gen-spacing" />
+        </div>
+        <div className="hor-flexbox">
+          <Label id="form-label" for="changeDispositionTo">Change Disposition To: </Label>
+          <Input type="dropdown" name="changeDispositionToText" id="changeDispositionToText" className="gen-spacing" />
+        </div>
+      </FormGroup>
+      <Button className="nw-button">Save</Button>
+      <Button className="nw-button">Main Menu</Button>
+      <Button className="nw-button">Clear</Button>
+    </Form>
+  )
 }
-export default Form;
 
+export default NWTBChangeBookDispositionForm;
