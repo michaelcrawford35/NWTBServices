@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 // Must sign into the database inorder to connect the table
@@ -15,7 +16,7 @@ public class NWTXCM {
     @Column(name = "NWTXCM_MESSAGE")
     private String NWTXCM_MESSAGE;
     @Column(name = "NWTXCM_ACTIVITY_DATE")
-    private String NWTXCM_ACTIVITY_DATE;
+    private Date NWTXCM_ACTIVITY_DATE;
 
     public String getNWTXCM_COURSE() {
         return NWTXCM_COURSE;
@@ -33,11 +34,11 @@ public class NWTXCM {
         this.NWTXCM_MESSAGE = NWTXCM_MESSAGE;
     }
 
-    public String getNWTXCM_ACTIVITY_DATE() {
+    public Date getNWTXCM_ACTIVITY_DATE() {
         return NWTXCM_ACTIVITY_DATE;
     }
 
-    public void setNWTXCM_ACTIVITY_DATE(String NWTXCM_ACTIVITY_DATE) {
+    public void setNWTXCM_ACTIVITY_DATE(Date NWTXCM_ACTIVITY_DATE) {
         this.NWTXCM_ACTIVITY_DATE = NWTXCM_ACTIVITY_DATE;
     }
 }

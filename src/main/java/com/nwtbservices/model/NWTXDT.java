@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 // Must sign into the database inorder to connect the table
@@ -27,15 +28,15 @@ public class NWTXDT {
     @Column(name = "NWTXDT_DISPOSITION")
     private String NWTXDT_DISPOSITION;
     @Column(name = "NWTXDT_BOOK_SALE_PRICE")
-    private float NWTXDT_BOOK_SALE_PRICE;
+    private Float NWTXDT_BOOK_SALE_PRICE;
     @Column(name = "NWTXDT_PREV_PIDM")
     private int NWTXDT_PREV_PIDM;
     @Column(name = "NWTXDT_PREV_TERM")
     private String NWTXDT_PREV_TERM;
     @Column(name = "NWTXDT_PREV_DATE_CHECKED_IN")
-    private String NWTXDT_PREV_DATE_CHECKED_IN;
+    private Date NWTXDT_PREV_DATE_CHECKED_IN;
     @Column(name = "NWTXDT_ACTIVITY_DATE")
-    private String NWTXDT_ACTIVITY_DATE;
+    private Date NWTXDT_ACTIVITY_DATE;
     @Column(name = "NWTXDT_BILLABLE_FLAG")
     private String NWTXDT_BILLABLE_FLAG;
 
@@ -103,11 +104,11 @@ public class NWTXDT {
         this.NWTXDT_DISPOSITION = NWTXDT_DISPOSITION;
     }
 
-    public float getNWTXDT_BOOK_SALE_PRICE() {
+    public Float getNWTXDT_BOOK_SALE_PRICE() {
         return NWTXDT_BOOK_SALE_PRICE;
     }
 
-    public void setNWTXDT_BOOK_SALE_PRICE(float NWTXDT_BOOK_SALE_PRICE) {
+    public void setNWTXDT_BOOK_SALE_PRICE(Float NWTXDT_BOOK_SALE_PRICE) {
         this.NWTXDT_BOOK_SALE_PRICE = NWTXDT_BOOK_SALE_PRICE;
     }
 
@@ -127,19 +128,19 @@ public class NWTXDT {
         this.NWTXDT_PREV_TERM = NWTXDT_PREV_TERM;
     }
 
-    public String getNWTXDT_PREV_DATE_CHECKED_IN() {
+    public Date getNWTXDT_PREV_DATE_CHECKED_IN() {
         return NWTXDT_PREV_DATE_CHECKED_IN;
     }
 
-    public void setNWTXDT_PREV_DATE_CHECKED_IN(String NWTXDT_PREV_DATE_CHECKED_IN) {
+    public void setNWTXDT_PREV_DATE_CHECKED_IN(Date NWTXDT_PREV_DATE_CHECKED_IN) {
         this.NWTXDT_PREV_DATE_CHECKED_IN = NWTXDT_PREV_DATE_CHECKED_IN;
     }
 
-    public String getNWTXDT_ACTIVITY_DATE() {
+    public Date getNWTXDT_ACTIVITY_DATE() {
         return NWTXDT_ACTIVITY_DATE;
     }
 
-    public void setNWTXDT_ACTIVITY_DATE(String NWTXDT_ACTIVITY_DATE) {
+    public void setNWTXDT_ACTIVITY_DATE(Date NWTXDT_ACTIVITY_DATE) {
         this.NWTXDT_ACTIVITY_DATE = NWTXDT_ACTIVITY_DATE;
     }
 
