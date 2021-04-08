@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 // Must sign into the database inorder to connect the table
@@ -23,7 +24,7 @@ public class NWTXAR {
     @Column(name="NWTXAR_DOCUMENT_NO")
     private String NWTXAR_DOCUMENT_NO;
     @Column(name="NWTXAR_BILL_DATE")
-    private String NWTXAR_BILL_DATE;
+    private Date NWTXAR_BILL_DATE;
     @Column(name="NWTXAR_TERM")
     private String NWTXAR_TERM;
 
@@ -75,11 +76,11 @@ public class NWTXAR {
         this.NWTXAR_DOCUMENT_NO = NWTXAR_DOCUMENT_NO;
     }
 
-    public String getNWTXAR_BILL_DATE() {
+    public Date getNWTXAR_BILL_DATE() {
         return NWTXAR_BILL_DATE;
     }
 
-    public void setNWTXAR_BILL_DATE(String NWTXAR_BILL_DATE) {
+    public void setNWTXAR_BILL_DATE(Date NWTXAR_BILL_DATE) {
         this.NWTXAR_BILL_DATE = NWTXAR_BILL_DATE;
     }
 
