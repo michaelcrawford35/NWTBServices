@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import java.sql.Date;
 
 @Entity
 // Must sign into the database inorder to connect the table
@@ -30,23 +31,23 @@ public class NWTXIN {
     private String NWTXIN_BOOK_STATUS;
     @NotEmpty
     @Column(name = "NWTXIN_CURRENT_PRICE")
-    private float NWTXIN_CURRENT_PRICE;
+    private Float NWTXIN_CURRENT_PRICE;
     @Id
     @NotEmpty
     @Column(name = "NWTXIN_ISBN")
     private String NWTXIN_ISBN;
     @NotEmpty
     @Column(name = "NWTXIN_PURCHASE_DATE")
-    private String NWTXIN_PURCHASE_DATE;
+    private Date NWTXIN_PURCHASE_DATE;
     @NotEmpty
     @Column(name = "NWTXIN_FIRST_USED_DATE")
-    private String NWTXIN_FIRST_USED_DATE;
+    private Date NWTXIN_FIRST_USED_DATE;
     @NotEmpty
     @Column(name = "NWTXIN_DISCONTINUED_DATE")
-    private String NWTXIN_DISCONTINUED_DATE;
+    private Date NWTXIN_DISCONTINUED_DATE;
     @NotEmpty
     @Column(name = "NWTXIN_ACTIVITY_DATE")
-    private String NWTXIN_ACTIVITY_DATE;
+    private Date NWTXIN_ACTIVITY_DATE;
     @NotEmpty
     @Column(name = "NWTXIN_COURSE_NAME")
     private String NWTXIN_COURSE_NAME;
@@ -117,11 +118,11 @@ public class NWTXIN {
         this.NWTXIN_BOOK_STATUS = NWTXIN_BOOK_STATUS;
     }
 
-    public float getNWTXIN_CURRENT_PRICE() {
+    public Float getNWTXIN_CURRENT_PRICE() {
         return NWTXIN_CURRENT_PRICE;
     }
 
-    public void setNWTXIN_CURRENT_PRICE(float NWTXIN_CURRENT_PRICE) {
+    public void setNWTXIN_CURRENT_PRICE(Float NWTXIN_CURRENT_PRICE) {
         this.NWTXIN_CURRENT_PRICE = NWTXIN_CURRENT_PRICE;
     }
 
@@ -133,35 +134,35 @@ public class NWTXIN {
         this.NWTXIN_ISBN = NWTXIN_ISBN;
     }
 
-    public String getNWTXIN_PURCHASE_DATE() {
+    public Date getNWTXIN_PURCHASE_DATE() {
         return NWTXIN_PURCHASE_DATE;
     }
 
-    public void setNWTXIN_PURCHASE_DATE(String NWTXIN_PURCHASE_DATE) {
+    public void setNWTXIN_PURCHASE_DATE(Date NWTXIN_PURCHASE_DATE) {
         this.NWTXIN_PURCHASE_DATE = NWTXIN_PURCHASE_DATE;
     }
 
-    public String getNWTXIN_FIRST_USED_DATE() {
+    public Date getNWTXIN_FIRST_USED_DATE() {
         return NWTXIN_FIRST_USED_DATE;
     }
 
-    public void setNWTXIN_FIRST_USED_DATE(String NWTXIN_FIRST_USED_DATE) {
+    public void setNWTXIN_FIRST_USED_DATE(Date NWTXIN_FIRST_USED_DATE) {
         this.NWTXIN_FIRST_USED_DATE = NWTXIN_FIRST_USED_DATE;
     }
 
-    public String getNWTXIN_DISCONTINUED_DATE() {
+    public Date getNWTXIN_DISCONTINUED_DATE() {
         return NWTXIN_DISCONTINUED_DATE;
     }
 
-    public void setNWTXIN_DISCONTINUED_DATE(String NWTXIN_DISCONTINUED_DATE) {
+    public void setNWTXIN_DISCONTINUED_DATE(Date NWTXIN_DISCONTINUED_DATE) {
         this.NWTXIN_DISCONTINUED_DATE = NWTXIN_DISCONTINUED_DATE;
     }
 
-    public String getNWTXIN_ACTIVITY_DATE() {
+    public Date getNWTXIN_ACTIVITY_DATE() {
         return NWTXIN_ACTIVITY_DATE;
     }
 
-    public void setNWTXIN_ACTIVITY_DATE(String NWTXIN_ACTIVITY_DATE) {
+    public void setNWTXIN_ACTIVITY_DATE(Date NWTXIN_ACTIVITY_DATE) {
         this.NWTXIN_ACTIVITY_DATE = NWTXIN_ACTIVITY_DATE;
     }
 

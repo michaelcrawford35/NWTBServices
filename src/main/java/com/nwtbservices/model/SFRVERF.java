@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import java.sql.Date;
 
 @Entity
 // Must sign into the database inorder to connect the table
@@ -20,7 +21,7 @@ public class SFRVERF {
     private String SFRVERF_TERM_CODE;
     @NotEmpty
     @Column(name="SFRVERF_ACTIVITY_DATE")
-    private String SFRVERF_ACTIVITY_DATE;
+    private Date SFRVERF_ACTIVITY_DATE;
     @NotEmpty
     @Column(name="SFRVERF_LEVL_CODE")
     private String SFRVERF_LEVL_CODE;
@@ -44,11 +45,11 @@ public class SFRVERF {
         this.SFRVERF_TERM_CODE = SFRVERF_TERM_CODE;
     }
 
-    public String getSFRVERF_ACTIVITY_DATE() {
+    public Date getSFRVERF_ACTIVITY_DATE() {
         return SFRVERF_ACTIVITY_DATE;
     }
 
-    public void setSFRVERF_ACTIVITY_DATE(String SFRVERF_ACTIVITY_DATE) {
+    public void setSFRVERF_ACTIVITY_DATE(Date SFRVERF_ACTIVITY_DATE) {
         this.SFRVERF_ACTIVITY_DATE = SFRVERF_ACTIVITY_DATE;
     }
 
