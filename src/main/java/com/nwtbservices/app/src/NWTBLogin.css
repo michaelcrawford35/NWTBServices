@@ -1,0 +1,13 @@
+.login-container {
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+.login-container label,
+.login-container .label-spacer {
+    min-width: 5em;
+}
+
+.login-container input {
+    flex: 1;
+}

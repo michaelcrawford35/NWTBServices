@@ -26,7 +26,7 @@ public class Group
     private String country;
     private String postalCode;
     @ManyToOne(cascade=CascadeType.PERSIST)
-    private User user;
+    private NWTXUSER user;
     
     @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     private Set<Event> events;
