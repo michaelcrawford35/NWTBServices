@@ -14,17 +14,17 @@ const NWTBReplaceBarcodeForm = (props) => {
             <h2 className="nw-color">Textbook Services<br/>Replace Barcode</h2>
             <FormGroup className="form-inline draw-border">
                 <div className="hor-flexbox">
-                    <div>
+                    <div className="hor-flexbox">
+                        <Label for="strikeBarcode" name="strikeBarcodeText">Strike Barcode: </Label>
+                        <Input type="text" name="strikeBarcodeText" id="strikeBarcodeText" autoFocus={true}/>
+                    </div>
+                    <div className="hor-flexbox">
                         <Label for="bookCode">Book Code: </Label>
                         <Input type="text" name="bookCodeText" id="bookCodeText" className="gen-spacing"/>
                     </div>
-                    <div>
+                    <div className="hor-flexbox">
                         <Label for="bookYear">Book Year: </Label>
                         <Input type="text" name="bookYearText" id="bookYearText"/>
-                    </div>
-                    <div>
-                        <Label for="strikeBarcode" name="strikeBarcodeText">Strike Barcode: </Label>
-                        <Input type="text" name="strikeBarcodeText" id="strikeBarcodeText"/>
                     </div>
                 </div>
 

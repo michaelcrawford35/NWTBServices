@@ -18,13 +18,11 @@ const NWTBQueryCourseForm = (props) => {
             </FormGroup>
             <FormGroup className="form-inline draw-border">
                <Table size="sm">
-                   <thread>
                        <tr className="nw-table-head">
-                           <th>Book Code</th>
-                           <th>Book Year</th>
+                           <th style={{width:"20%"}}>Book Code</th>
+                           <th style={{width:"20%"}}>Book Year</th>
                            <th>Title</th>
                        </tr>
-                   </thread>
                    <tbody>
                    <tr>
                        <td></td>
