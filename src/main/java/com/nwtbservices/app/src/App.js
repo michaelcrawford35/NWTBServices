@@ -16,12 +16,14 @@ import NWTBMaintenance from  './NWTBMaintenance';
 import NWTBAddBooks from './NWTBAddBooks';
 import NWTBQueryBooks from './NWTBQueryBooks';
 import NWTBChangeBookDisposition from './NWTBChangeBookDisposition';
+import NWTBLogin from "./NWTBLogin";
 
 class App extends Component {
     render() {
         return (
             <Router>
                 <Switch>
+                    <Route path='/login' exact={true} component={NWTBLogin}/>
                     <Route path='/groups' exact={true} component={GroupList}/>
                     <Route path='/' exact={true} component={NWTBHome}/>
                     <Route path='/cico' exact={true} component={NWTBCico}/>
