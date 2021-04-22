@@ -27,7 +27,7 @@ class NWTBMaintenanceForm extends Component {
 
    const test = nwtxin_fetched.map(nwtxin => {
      return <div>
-       {nwtxin.NWTXIN_BOOK_CODE || "Does this show up?"}
+       {nwtxin.nwtxin_BOOK_CODE || "Does this show up?"}
      </div>
    });
 
