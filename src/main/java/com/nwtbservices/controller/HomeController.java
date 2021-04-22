@@ -4,14 +4,15 @@ package com.nwtbservices.controller;
 import com.nwtbservices.repository.*;
 import com.nwtbservices.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api")
 public class HomeController {
     // Initialized the repository with Autowired
     @Autowired
@@ -87,6 +88,22 @@ public class HomeController {
     @GetMapping ("/SSRMEETFORM")
     public SSRMEET ssrmeetFormResult(@RequestParam(name = "ssrmeetCodeName", defaultValue = "") String Code, @RequestParam(name = "ssrmeetCRNName", defaultValue = "") String CRN){
         return SSRMEETRepository.findByCRN(Code, CRN);
+    }
+
+    // Returns the NWTXIN entry with the given Book Code and newest Edition Year
+    @GetMapping("/nwtxin/{code}")
+    ResponseEntity<?> getNWTXIN(@PathVariable String code) {
+        Optional<NWTXIN> nwtxin = NWTXINRepository.findByBookCode(code.toUpperCase());
+        return nwtxin.map(response -> ResponseEntity.ok().body(response))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    // Returns the NWTXIN entry with the given Book Code and given Edition Year
+    @GetMapping("/nwtxin/{code}/{year}")
+    ResponseEntity<?> getNWTXIN(@PathVariable String code, @PathVariable String year) {
+        Optional<NWTXIN> nwtxin = NWTXINRepository.findByBookCodeAndYear(code.toUpperCase(), year);
+        return nwtxin.map(response -> ResponseEntity.ok().body(response))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 }
 

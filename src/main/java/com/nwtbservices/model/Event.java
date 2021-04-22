@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.time.Instant;
 import java.util.Set;
-
+// This file is from a tutorial. It is only used as an example for what to do in the actual project.
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

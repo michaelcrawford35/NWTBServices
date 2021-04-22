@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
-
+// This file is from a tutorial. It is only used as an example for what to do in the actual project.
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor

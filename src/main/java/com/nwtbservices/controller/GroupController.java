@@ -14,6 +14,8 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Optional;
 
+// This file is from a tutorial. It is only used as an example for what to do in the actual project.
+
 @RestController
 @RequestMapping("/api")
 class GroupController

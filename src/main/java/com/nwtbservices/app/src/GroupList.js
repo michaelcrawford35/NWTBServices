@@ -3,6 +3,7 @@ import { Button, ButtonGroup, Container, Table } from 'reactstrap';
 import AppNavbar from './AppNavbar';
 import { Link } from 'react-router-dom';
 
+// This file is from a tutorial. It is only used as an example for what to do in the actual project.
 class GroupList extends Component {
 
     constructor(props) {
