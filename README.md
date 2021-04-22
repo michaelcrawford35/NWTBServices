@@ -8,4 +8,3 @@
 ## Back End Team
 1. Vyron Galapin
 2. Justin Lalumondier
-3. James Troester
